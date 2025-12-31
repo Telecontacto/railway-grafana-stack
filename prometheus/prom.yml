@@ -6,9 +6,9 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-  - job_name: 'tc-api'
+  - job_name: tc-api
     scheme: https
-    metrics_path: /metrics
+    metrics_path: /api/v2/metrics
     static_configs:
       - targets: ['$TC_API_URL']
 
