@@ -2,7 +2,6 @@ ARG VERSION=v3.2.1
 FROM prom/prometheus:${VERSION}
 
 COPY prom.yml /etc/prometheus/prom.yml.template
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY --chmod=755 entrypoint.sh /entrypoint.sh  # sets exec perms at copy time
 
 ENTRYPOINT ["/entrypoint.sh"]
