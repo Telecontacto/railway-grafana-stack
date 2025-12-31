@@ -11,7 +11,7 @@ scrape_configs:
     metrics_path: /api/v2/metrics
     static_configs:
       - targets:
-          - ${TC_API_HOST}   # expands to reports.telecontacto.com
+          - $TC_API_HOST  # expands to reports.telecontacto.com
  
 
   #  ? TODO: add your services here
