@@ -10,5 +10,4 @@ scrape_configs:
     scheme: https
     metrics_path: /api/v2/metrics
     static_configs:
-      - targets:
-          - $TC_API_HOST
+      - targets: ['$TC_API_HOST']
