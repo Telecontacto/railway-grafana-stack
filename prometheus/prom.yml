@@ -11,4 +11,4 @@ scrape_configs:
     metrics_path: /api/v2/metrics
     static_configs:
       - targets:
-          - ${TC_API_HOST}
+          - $TC_API_HOST
